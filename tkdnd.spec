@@ -47,3 +47,15 @@ rm -rf %{buildroot}
 %doc doc/tkDND.htm
 %{tcl_sitearch}/%{dirname}
 %{_mandir}/mann/tkDND.*
+
+
+%changelog
+* Sat Aug 28 2010 Jani Välimaa <wally@mandriva.org> 2.2-1mdv2011.0
++ Revision: 573759
+- new version 2.2
+
+* Sun Mar 14 2010 Jani Välimaa <wally@mandriva.org> 2.0-1mdv2010.1
++ Revision: 518977
+- import tcl-tkdnd
+
+
