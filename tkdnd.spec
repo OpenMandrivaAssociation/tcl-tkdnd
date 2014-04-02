@@ -2,14 +2,13 @@
 %define dirname %{oname}%{version}
 
 Name:		tcl-%{oname}
-Version:	2.2
-Release:	%mkrel 1
+Version:	2.6
+Release:	1
 Summary:	Tk extension that adds native drag & drop capabilities
 Group:		Development/Other
 License:	BSD
 URL:		http://tkdnd.sourceforge.net/
-Source0:	http://dl.sourceforge.net/%{oname}/%{oname}%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+Source0:	http://dl.sourceforge.net/%{oname}/%{oname}%{version}-src.tar.gz
 BuildRequires:	tcl-devel >= 8.4
 BuildRequires:	tk-devel >= 8.4
 Requires:	tcl >= 8.4
@@ -22,7 +21,7 @@ Under Unix the drag & drop protocol in use is the XDND protocol version 4
 (also used by the QT toolkit, KDE & GNOME Desktops).
 
 %prep
-%setup -q -n %{dirname}
+%setup -q -n %{oname}%{version}
 
 # fix file rights
 chmod 644 doc/tkDND.htm
@@ -36,26 +35,9 @@ chmod 644 doc/tkDND.htm
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc doc/tkDND.htm
 %{tcl_sitearch}/%{dirname}
 %{_mandir}/mann/tkDND.*
-
-
-%changelog
-* Sat Aug 28 2010 Jani Välimaa <wally@mandriva.org> 2.2-1mdv2011.0
-+ Revision: 573759
-- new version 2.2
-
-* Sun Mar 14 2010 Jani Välimaa <wally@mandriva.org> 2.0-1mdv2010.1
-+ Revision: 518977
-- import tcl-tkdnd
-
-
