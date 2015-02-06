@@ -3,7 +3,7 @@
 
 Name:		tcl-%{oname}
 Version:	2.6
-Release:	1
+Release:	2
 Summary:	Tk extension that adds native drag & drop capabilities
 Group:		Development/Other
 License:	BSD
