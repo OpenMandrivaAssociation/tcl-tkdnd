@@ -7,7 +7,7 @@ Release:	2
 Summary:	Tk extension that adds native drag & drop capabilities
 Group:		Development/Other
 License:	BSD
-URL:		http://tkdnd.sourceforge.net/
+URL:		https://tkdnd.sourceforge.net/
 Source0:	http://dl.sourceforge.net/%{oname}/%{oname}%{version}-src.tar.gz
 BuildRequires:	tcl-devel >= 8.4
 BuildRequires:	tk-devel >= 8.4
